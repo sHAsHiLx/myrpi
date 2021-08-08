@@ -5,3 +5,5 @@ echo "Cloning..."
 git clone -b ${versions[-1]} https://github.com/hestiacp/hestiacp hestiacp-${versions[-1]}
 cd hestiacp-${versions[-1]}/src
 ./hst_autocompile.sh --all --noinstall --keepbuild '~localsrc'
+cd ../install/
+bash hst-install-debian.sh --with-debs /tmp/hestiacp-src/deb/
