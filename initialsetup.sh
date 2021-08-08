@@ -7,7 +7,7 @@ sed -i 's/# uk_UA/uk_UA/g' /etc/locale.gen
 locale-gen
 update-locale "LANG=ru_UA.UTF-8"
 curl -fsSL http://www.tataranovich.com/debian/gpg | apt-key add -
-APT_SOURCE='deb http://www.tataranovich.com/debian sid main'
+APT_SOURCE='deb http://www.tataranovich.com/debian buster main backports'
 echo $APT_SOURCE | tee /etc/apt/sources.list.d/tataranovich.list
 apt update
 apt install mc gpm arj dbview genisoimage links odt2txt zip
