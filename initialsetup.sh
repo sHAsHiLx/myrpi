@@ -9,6 +9,9 @@ sed -i 's/# uk_UA/uk_UA/g' /etc/locale.gen
 locale-gen
 update-locale "LANG=ru_UA.UTF-8"
 
+# Setting timezone
+timedatectl set-timezone Europe/Kiev
+
 # Adding repo with latest Midnight Commander
 curl -fsSL http://www.tataranovich.com/debian/gpg | apt-key add -
 APT_SOURCE='deb http://www.tataranovich.com/debian buster main backports'
