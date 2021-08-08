@@ -24,5 +24,5 @@ dphys-swapfile swapon
 
 # Updating system and installing packages
 apt update
-apt -y install mc gpm arj dbview genisoimage links odt2txt zip
+apt -y install mc gpm arj dbview genisoimage links odt2txt zip git
 apt -y full-upgrade
