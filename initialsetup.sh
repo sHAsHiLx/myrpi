@@ -15,6 +15,7 @@ APT_SOURCE='deb http://www.tataranovich.com/debian buster main backports'
 echo $APT_SOURCE | tee /etc/apt/sources.list.d/tataranovich.list
 
 # Setting greater swap file
+sed -i 's/#CONF_MAXSWAP/CONF_MAXSWAP/g' /etc/dphys-swapfile
 sed -i -e '/CONF_SWAPSIZE=/ s/=.*/=8192/' /etc/dphys-swapfile
 sed -i -e '/CONF_MAXSWAP=/ s/=.*/=8192/' /etc/dphys-swapfile
 dphys-swapfile swapoff
