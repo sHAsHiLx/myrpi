@@ -26,7 +26,7 @@ dphys-swapfile setup
 dphys-swapfile swapon
 
 # Setting static IP
-cat << EOF >> /etc/dhcpcd.conf
+cat << EOF | tee -a /etc/dhcpcd.conf
 
 static ip_address=192.168.28.11/24
 static routers=192.168.28.1
