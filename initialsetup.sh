@@ -25,6 +25,13 @@ dphys-swapfile swapoff
 dphys-swapfile setup
 dphys-swapfile swapon
 
+# Setting static IP
+cat << EOF | tee /etc/dhcpcd.conf
+static ip_address=192.168.28.11/24
+static routers=192.168.28.1
+static domain_name_servers=192.168.28.5
+EOF
+
 # Updating system and installing packages
 apt update
 apt -y install mc gpm arj dbview genisoimage links odt2txt zip git
